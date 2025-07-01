@@ -1,0 +1,40 @@
+mentorship-platform/
+├── app/
+│   ├── components/
+│   │   └── Sidebar.tsx          # Reusable Sidebar component for role-based navigation
+│   ├── controllers/
+│   │   ├── authController.ts    # Handles authentication logic (login, register)
+│   │   ├── mentorshipController.ts # Manages mentorship request operations
+│   │   ├── sessionController.ts # Manages session and availability operations
+│   │   └── userController.ts    # Handles user profile and role operations
+│   ├── models/
+│   │   └── user.ts              # Defines Mongoose schemas and interfaces for User, MentorshipRequest, Session, Availability
+│   ├── routes/
+│   │   ├── auth/
+│   │   │   ├── login.tsx        # Login route with form and action
+│   │   │   ├── logout.tsx       # Logout routeilibre
+│   │   │   └── register.tsx     # Register route with form and action (admin-only)
+│   │   ├── admin/~
+│   │   │   ├── matches.tsx      # Admin route to view mentorship matches
+│   │   │   ├── sessions.tsx     # Admin route to view all sessions
+│   │   │   └── users.tsx        # Admin route to manage user roles
+│   │   ├── availability.tsx     # Mentor route to set/view availability
+│   │   ├── dashboard/
+│   │   │   └── index.tsx        # Main dashboard for all roles
+│   │   ├── mentors.tsx          # Mentee route to browse and request mentors
+│   │   ├── my-requests.tsx      # Redirects to /requests for Mentees
+│   │   ├── my-sessions.tsx      # Redirects to /sessions for Mentees
+│   │   ├── profile/
+│   │   │   └── edit.tsx         # Route to edit user profile
+│   │   ├── requests.tsx         # Route for Mentees (view sent requests) and Mentors (view received requests)
+│   │   └── sessions.tsx         # Route for Mentees (book/view sessions) and Mentors (view sessions)
+│   ├── utils/
+│   │   ├── auth.server.ts       # Authentication middleware (requireUserRole)
+│   │   ├── db.server.ts         # MongoDB connection utility
+│   │   └── session.server.ts    # Session management (cookie-based)
+│   └── root.tsx                 # Root layout with meta tags and app structure
+├── public/                      # Static assets (e.g., images, favicon)
+├── .env                         # Environment variables (MONGODB_URI, SESSION_SECRET)
+├── package.json                 # Project dependencies and scripts
+├── tsconfig.json                # TypeScript configuration
+└── README.md                    # Project documentation (optional)
